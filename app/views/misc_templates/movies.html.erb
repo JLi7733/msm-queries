@@ -17,13 +17,13 @@
       <tr>
         <td><%= movie.id %></td>
         <td>
-          <%= image_tag(movie.image, style: "width: 250px;")%>
+          <img src = "<%= movie.image%>" width = "250">
         </td>
         <td><%= movie.title %></td>
         <td><%= movie.year %></td>
         <td><%= movie.director.name %></td>
         <td>
-          <%= link_to 'Show Details', "/movies/#{movie.id}", class: 'btn btn-primary' %> <!-- Link to the director's show page -->
+          <%= link_to 'Show details', "/movies/#{movie.id}", class: 'btn btn-primary' %> <!-- Link to the director's show page -->
         </td>
       </tr>
     <% end %>

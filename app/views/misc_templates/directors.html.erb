@@ -1,5 +1,5 @@
 <h1>
-  List of all movies
+  List of all directors
 </h1>
 
 <table border = 1>
@@ -22,7 +22,7 @@
         <td><%= director.name %></td>
         <td><%= director.dob %></td>
         <td>
-          <%= link_to 'Show Details', "/directors/#{director.id}", class: 'btn btn-primary' %> <!-- Link to the director's show page -->
+          <%= link_to 'Show details', "/directors/#{director.id}", class: 'btn btn-primary' %> <!-- Link to the director's show page -->
         </td>
       </tr>
     <% end %>
