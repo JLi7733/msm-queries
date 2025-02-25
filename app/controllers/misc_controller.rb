@@ -28,6 +28,11 @@ class MiscController < ApplicationController
     render({ :template => "misc_templates/movies"})
   end
 
+  def movie
+    @movie = Movie.find(params[:id])
+    render({ :template => "misc_templates/movie"})
+  end
+
   def actors
     @actors = Actor.all
     render({ :template => "misc_templates/actors"})
