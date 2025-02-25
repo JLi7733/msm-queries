@@ -1,0 +1,30 @@
+<h1>
+  List of all movies
+</h1>
+
+<table border = 1>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Dob</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Director.all.each do |director| %>
+      <tr>
+        <td><%= director.id %></td>
+        <td>
+          <%= image_tag(director.image, style: "width: 250px;")%>
+        </td>
+        <td><%= director.name %></td>
+        <td><%= director.dob %></td>
+        <td>
+          <%= link_to 'Show Details', "/directors/#{director.id}", class: 'btn btn-primary' %> <!-- Link to the director's show page -->
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
